@@ -1,2 +1,15 @@
-# Strong-number
-This program checks whether a number is a Strong Number. A Strong Number is a number whose sum of the factorials of its digits equals the original number.
+import math
+
+n = int(input("Enter a number: "))
+temp = n
+sum = 0
+
+while temp > 0:
+    digit = temp % 10
+    sum += math.factorial(digit)
+    temp //= 10
+
+if sum == n:
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
